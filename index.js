@@ -131,7 +131,7 @@ function writeToFile(filePath, data) {
     console.log(result);
 
     // The output file should have an extension of .csv
-    const resolvedPath = path.resolve(filePath || `../${newFilename}.csv`);
+    const resolvedPath = path.resolve(filePath || `./${newFilename}.csv`);
     fs.writeFile(resolvedPath, data, (error) => {
         if (error) {
             throw error;
